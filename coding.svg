@@ -1,236 +1,166 @@
 <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" width="420" height="320">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
+      .cursor { animation: blink 1s step-end infinite; }
+      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
-      .window { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+      .line1  { animation: reveal .3s ease forwards; opacity:0; animation-delay:.2s; }
+      .line2  { animation: reveal .3s ease forwards; opacity:0; animation-delay:.8s; }
+      .line3  { animation: reveal .3s ease forwards; opacity:0; animation-delay:1.4s; }
+      .line4  { animation: reveal .3s ease forwards; opacity:0; animation-delay:2.0s; }
+      .line5  { animation: reveal .3s ease forwards; opacity:0; animation-delay:2.6s; }
+      .line6  { animation: reveal .3s ease forwards; opacity:0; animation-delay:3.2s; }
+      .line7  { animation: reveal .3s ease forwards; opacity:0; animation-delay:3.8s; }
+      .line8  { animation: reveal .3s ease forwards; opacity:0; animation-delay:4.4s; }
+      .line9  { animation: reveal .3s ease forwards; opacity:0; animation-delay:5.0s; }
+      .line10 { animation: reveal .3s ease forwards; opacity:0; animation-delay:5.6s; }
+      .line11 { animation: reveal .3s ease forwards; opacity:0; animation-delay:6.2s; }
+      .line12 { animation: reveal .3s ease forwards; opacity:0; animation-delay:6.8s; }
+      @keyframes reveal { to { opacity:1; } }
 
-      .cursor {
-        animation: blink 1s step-end infinite;
-      }
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
+      .float { animation: floatAnim 3s ease-in-out infinite; }
+      @keyframes floatAnim { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
 
-      .line1 { animation: reveal 0.3s ease forwards; opacity: 0; animation-delay: 0.2s; }
-      .line2 { animation: reveal 0.3s ease forwards; opacity: 0; animation-delay: 0.8s; }
-      .line3 { animation: reveal 0.3s ease forwards; opacity: 0; animation-delay: 1.4s; }
-      .line4 { animation: reveal 0.3s ease forwards; opacity: 0; animation-delay: 2.0s; }
-      .line5 { animation: reveal 0.3s ease forwards; opacity: 0; animation-delay: 2.6s; }
-      .line6 { animation: reveal 0.3s ease forwards; opacity: 0; animation-delay: 3.2s; }
-      .line7 { animation: reveal 0.3s ease forwards; opacity: 0; animation-delay: 3.8s; }
-      .line8 { animation: reveal 0.3s ease forwards; opacity: 0; animation-delay: 4.4s; }
-      .line9 { animation: reveal 0.3s ease forwards; opacity: 0; animation-delay: 5.0s; }
-      .line10 { animation: reveal 0.3s ease forwards; opacity: 0; animation-delay: 5.6s; }
-      .line11 { animation: reveal 0.3s ease forwards; opacity: 0; animation-delay: 6.2s; }
-      .line12 { animation: reveal 0.3s ease forwards; opacity: 0; animation-delay: 6.8s; }
-
-      @keyframes reveal {
-        to { opacity: 1; }
-      }
-
-      .float {
-        animation: floatAnim 3s ease-in-out infinite;
-      }
-      @keyframes floatAnim {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-6px); }
-      }
-
-      .glow {
-        animation: glowPulse 2s ease-in-out infinite alternate;
-      }
+      .glow { animation: glowPulse 2s ease-in-out infinite alternate; }
       @keyframes glowPulse {
         from { filter: drop-shadow(0 0 4px #00d9ff88); }
-        to { filter: drop-shadow(0 0 12px #00d9ffcc); }
-      }
-
-      .scanline {
-        animation: scan 4s linear infinite;
-      }
-      @keyframes scan {
-        0% { transform: translateY(-10px); opacity: 0; }
-        10% { opacity: 0.06; }
-        90% { opacity: 0.06; }
-        100% { transform: translateY(290px); opacity: 0; }
+        to   { filter: drop-shadow(0 0 14px #00d9ffcc); }
       }
     </style>
 
-    <!-- Terminal glow gradient -->
     <radialGradient id="bgGlow" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="#0d2137" />
-      <stop offset="100%" stop-color="#080f1a" />
+      <stop offset="0%"   stop-color="#0d2137"/>
+      <stop offset="100%" stop-color="#080f1a"/>
     </radialGradient>
-
-    <!-- Top bar gradient -->
     <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1a2f45" />
-      <stop offset="100%" stop-color="#152437" />
+      <stop offset="0%"   stop-color="#1a2f45"/>
+      <stop offset="100%" stop-color="#152437"/>
     </linearGradient>
-
-    <!-- Side accent -->
     <linearGradient id="accentLine" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00d9ff" />
-      <stop offset="50%" stop-color="#7c3aed" />
-      <stop offset="100%" stop-color="#00d9ff" />
+      <stop offset="0%"   stop-color="#00d9ff"/>
+      <stop offset="50%"  stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#00d9ff"/>
     </linearGradient>
-
-    <filter id="softGlow">
-      <feGaussianBlur stdDeviation="2" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
   </defs>
 
   <!-- Outer glow border -->
   <rect x="1" y="1" width="418" height="318" rx="12" ry="12"
-        fill="none" stroke="url(#accentLine)" stroke-width="1.5" opacity="0.7" class="glow float" />
+        fill="none" stroke="url(#accentLine)" stroke-width="1.5" opacity="0.8"
+        class="glow float"/>
 
-  <!-- Main background -->
-  <rect x="2" y="2" width="416" height="316" rx="11" ry="11" fill="url(#bgGlow)" />
+  <!-- Background -->
+  <rect x="2" y="2" width="416" height="316" rx="11" ry="11" fill="url(#bgGlow)"/>
 
-  <!-- Top title bar -->
-  <rect x="2" y="2" width="416" height="32" rx="11" ry="11" fill="url(#barGrad)" />
-  <rect x="2" y="22" width="416" height="12" fill="url(#barGrad)" />
+  <!-- Title bar -->
+  <rect x="2" y="2" width="416" height="32" rx="11" ry="11" fill="url(#barGrad)"/>
+  <rect x="2" y="22" width="416" height="12" fill="url(#barGrad)"/>
 
   <!-- Traffic lights -->
-  <circle cx="22" cy="18" r="5" fill="#ff5f57" />
-  <circle cx="38" cy="18" r="5" fill="#ffbd2e" />
-  <circle cx="54" cy="18" r="5" fill="#28c840" />
+  <circle cx="22" cy="18" r="5" fill="#ff5f57"/>
+  <circle cx="38" cy="18" r="5" fill="#ffbd2e"/>
+  <circle cx="54" cy="18" r="5" fill="#28c840"/>
 
   <!-- Terminal title -->
-  <text x="210" y="22" text-anchor="middle" font-family="JetBrains Mono, monospace"
+  <text x="210" y="22" text-anchor="middle"
+        font-family="'Courier New', Courier, monospace"
         font-size="10" fill="#8899aa" letter-spacing="2">kamakshi@devops: ~</text>
 
-  <!-- Left accent bar -->
-  <rect x="2" y="34" width="3" height="286" fill="url(#accentLine)" opacity="0.8" />
+  <!-- Left accent strip -->
+  <rect x="2" y="34" width="3" height="258" fill="url(#accentLine)" opacity="0.9"/>
 
-  <!-- Scanline effect -->
-  <rect x="5" y="0" width="412" height="18" fill="#00d9ff" opacity="0" class="scanline" />
+  <!-- Line number column -->
+  <rect x="5" y="34" width="30" height="258" fill="#0a1824"/>
 
-  <!-- Line numbers column -->
-  <rect x="5" y="34" width="30" height="286" fill="#0a1824" />
-
-  <!-- Code content area -->
-  <g class="window" font-family="JetBrains Mono, monospace" font-size="10.5">
+  <!-- Code block -->
+  <g font-family="'Courier New', Courier, monospace" font-size="10.5">
 
     <!-- Line numbers -->
     <g fill="#334455" font-size="9.5">
-      <text x="18" y="58" text-anchor="middle">1</text>
-      <text x="18" y="76" text-anchor="middle">2</text>
-      <text x="18" y="94" text-anchor="middle">3</text>
-      <text x="18" y="112" text-anchor="middle">4</text>
-      <text x="18" y="130" text-anchor="middle">5</text>
-      <text x="18" y="148" text-anchor="middle">6</text>
-      <text x="18" y="166" text-anchor="middle">7</text>
-      <text x="18" y="184" text-anchor="middle">8</text>
-      <text x="18" y="202" text-anchor="middle">9</text>
-      <text x="18" y="220" text-anchor="middle">10</text>
-      <text x="18" y="238" text-anchor="middle">11</text>
-      <text x="18" y="256" text-anchor="middle">12</text>
+      <text x="18" y="57"  text-anchor="middle">1</text>
+      <text x="18" y="75"  text-anchor="middle">2</text>
+      <text x="18" y="93"  text-anchor="middle">3</text>
+      <text x="18" y="111" text-anchor="middle">4</text>
+      <text x="18" y="129" text-anchor="middle">5</text>
+      <text x="18" y="147" text-anchor="middle">6</text>
+      <text x="18" y="165" text-anchor="middle">7</text>
+      <text x="18" y="183" text-anchor="middle">8</text>
+      <text x="18" y="201" text-anchor="middle">9</text>
+      <text x="18" y="219" text-anchor="middle">10</text>
+      <text x="18" y="237" text-anchor="middle">11</text>
+      <text x="18" y="255" text-anchor="middle">12</text>
     </g>
 
     <!-- Active line highlight -->
-    <rect x="35" y="244" width="379" height="16" fill="#00d9ff0d" rx="2" />
+    <rect x="35" y="243" width="381" height="16" fill="#00d9ff0d" rx="2"/>
 
-    <!-- Code lines -->
-    <!-- Line 1 -->
+    <!-- Lines of code -->
     <g class="line1">
-      <text x="44" y="58"><tspan fill="#7c3aed">class</tspan><tspan fill="#e2e8f0"> </tspan><tspan fill="#00d9ff">Kamakshi</tspan><tspan fill="#e2e8f0"> {</tspan></text>
+      <text x="44" y="57">
+        <tspan fill="#7c3aed">class </tspan><tspan fill="#00d9ff">Kamakshi</tspan><tspan fill="#e2e8f0"> {</tspan>
+      </text>
     </g>
-
-    <!-- Line 2 -->
     <g class="line2">
-      <text x="44" y="76">
+      <text x="44" y="75">
         <tspan fill="#64748b">  // </tspan><tspan fill="#94a3b8">Full Stack + DevOps Engineer</tspan>
       </text>
     </g>
-
-    <!-- Line 3 -->
     <g class="line3">
-      <text x="44" y="94">
+      <text x="44" y="93">
         <tspan fill="#e2e8f0">  </tspan><tspan fill="#f472b6">role</tspan><tspan fill="#94a3b8"> = </tspan><tspan fill="#86efac">"Backend &amp; Cloud"</tspan><tspan fill="#e2e8f0">;</tspan>
       </text>
     </g>
-
-    <!-- Line 4 -->
     <g class="line4">
-      <text x="44" y="112">
+      <text x="44" y="111">
         <tspan fill="#e2e8f0">  </tspan><tspan fill="#f472b6">focus</tspan><tspan fill="#94a3b8"> = </tspan><tspan fill="#86efac">"Containers + CI/CD"</tspan><tspan fill="#e2e8f0">;</tspan>
       </text>
     </g>
-
-    <!-- Line 5 -->
     <g class="line5">
-      <text x="44" y="130">
+      <text x="44" y="129">
         <tspan fill="#e2e8f0">  </tspan><tspan fill="#f472b6">stack</tspan><tspan fill="#94a3b8"> = </tspan><tspan fill="#e2e8f0">[</tspan><tspan fill="#86efac">"Node"</tspan><tspan fill="#e2e8f0">, </tspan><tspan fill="#86efac">"React"</tspan><tspan fill="#e2e8f0">, </tspan><tspan fill="#86efac">"AWS"</tspan><tspan fill="#e2e8f0">];</tspan>
       </text>
     </g>
-
-    <!-- Line 6 -->
     <g class="line6">
-      <text x="44" y="148">
+      <text x="44" y="147">
         <tspan fill="#e2e8f0">  </tspan><tspan fill="#f472b6">tools</tspan><tspan fill="#94a3b8"> = </tspan><tspan fill="#e2e8f0">[</tspan><tspan fill="#86efac">"Docker"</tspan><tspan fill="#e2e8f0">, </tspan><tspan fill="#86efac">"K8s"</tspan><tspan fill="#e2e8f0">];</tspan>
       </text>
     </g>
-
-    <!-- Line 7 -->
     <g class="line7">
-      <text x="44" y="166">
+      <text x="44" y="165">
         <tspan fill="#e2e8f0">  </tspan><tspan fill="#7c3aed">build</tspan><tspan fill="#e2e8f0">(</tspan><tspan fill="#fbbf24">dream</tspan><tspan fill="#e2e8f0">) {</tspan>
       </text>
     </g>
-
-    <!-- Line 8 -->
     <g class="line8">
-      <text x="44" y="184">
+      <text x="44" y="183">
         <tspan fill="#64748b">    // </tspan><tspan fill="#94a3b8">ship fast. scale harder.</tspan>
       </text>
     </g>
-
-    <!-- Line 9 -->
     <g class="line9">
-      <text x="44" y="202">
-        <tspan fill="#e2e8f0">    </tspan><tspan fill="#7c3aed">return</tspan><tspan fill="#e2e8f0"> </tspan><tspan fill="#fbbf24">deploy</tspan><tspan fill="#e2e8f0">(</tspan><tspan fill="#86efac">"prod"</tspan><tspan fill="#e2e8f0">);</tspan>
+      <text x="44" y="201">
+        <tspan fill="#e2e8f0">    </tspan><tspan fill="#7c3aed">return </tspan><tspan fill="#fbbf24">deploy</tspan><tspan fill="#e2e8f0">(</tspan><tspan fill="#86efac">"prod"</tspan><tspan fill="#e2e8f0">);</tspan>
       </text>
     </g>
-
-    <!-- Line 10 -->
     <g class="line10">
-      <text x="44" y="220"><tspan fill="#e2e8f0">  }</tspan></text>
+      <text x="44" y="219"><tspan fill="#e2e8f0">  }</tspan></text>
     </g>
-
-    <!-- Line 11 -->
     <g class="line11">
-      <text x="44" y="238"><tspan fill="#e2e8f0">}</tspan></text>
+      <text x="44" y="237"><tspan fill="#e2e8f0">}</tspan></text>
     </g>
-
-    <!-- Line 12 - prompt -->
     <g class="line12">
-      <text x="44" y="256">
-        <tspan fill="#28c840">❯ </tspan><tspan fill="#00d9ff">git push</tspan><tspan fill="#94a3b8"> origin main</tspan>
-        <tspan fill="#00d9ff" class="cursor">▋</tspan>
+      <text x="44" y="255">
+        <tspan fill="#28c840">$ </tspan><tspan fill="#00d9ff">git push </tspan><tspan fill="#94a3b8">origin main</tspan><tspan fill="#00d9ff" class="cursor">|</tspan>
       </text>
     </g>
-
   </g>
 
-  <!-- Bottom status bar -->
-  <rect x="2" y="292" width="416" height="26" rx="0" fill="#0a1824" />
-  <rect x="2" y="304" width="416" height="14" rx="0" fill="#0a1824" />
-  <rect x="2" y="292" width="416" height="26" rx="0" ry="0" fill="#0a1824" />
-  <!-- Round bottom corners -->
-  <rect x="2" y="300" width="416" height="18" fill="#0a1824" />
-  <rect x="2" y="292" width="416" height="26" rx="11" ry="11" fill="#0a1824" />
-  <rect x="2" y="292" width="416" height="13" fill="#0a1824" />
+  <!-- Status bar -->
+  <rect x="2" y="292" width="416" height="26" rx="0" fill="#0a1824"/>
+  <rect x="2" y="300" width="416" height="18" fill="#0a1824"/>
+  <rect x="2" y="292" width="416" height="26" rx="11" ry="11" fill="#0a1824"/>
+  <rect x="2" y="292" width="416" height="13" fill="#0a1824"/>
 
-  <!-- Status bar content -->
-  <circle cx="20" cy="305" r="4" fill="#28c840" />
-  <text x="30" y="309" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#64748b">main</text>
-  <text x="80" y="309" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#334455">⎇  0 errors · 0 warnings</text>
-  <text x="310" y="309" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#334455" text-anchor="middle">JavaScript · UTF-8</text>
-  <text x="405" y="309" font-family="JetBrains Mono, monospace" font-size="8.5" fill="#334455" text-anchor="end">Ln 12</text>
+  <circle cx="20" cy="305" r="4" fill="#28c840"/>
+  <text x="30" y="309" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#64748b">main</text>
+  <text x="75" y="309" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#334455">0 errors · 0 warnings</text>
+  <text x="300" y="309" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#334455">JavaScript · UTF-8</text>
+  <text x="412" y="309" font-family="'Courier New',Courier,monospace" font-size="8.5" fill="#334455" text-anchor="end">Ln 12</text>
 </svg>
