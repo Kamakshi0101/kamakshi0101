@@ -1,5 +1,5 @@
 <!-- ═══════════════════════════════════════════════════════ -->
-<!--               KAMAKSHI AGGARWAL — GitHub Profile       -->
+<!--               KAMAKSHI AGGARWAL
 <!-- ═══════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -7,7 +7,7 @@
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=30&duration=2800&pause=900&color=00D9FF&center=true&vCenter=true&width=750&lines=Hey+there!+I'm+Kamakshi+👋;Full+Stack+%2B+DevOps+Engineer;Backend+%7C+Cloud+%7C+Containers;CI%2FCD+%7C+Orchestration+%7C+Scale;Building+what+matters.+Shipping+fast." alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=28&duration=2800&pause=900&color=00D9FF&center=true&vCenter=true&width=750&lines=Hey+there!+I'm+Kamakshi+%F0%9F%91%8B;Full+Stack+%2B+DevOps+Engineer;Backend+%7C+Cloud+%7C+Containers;CI%2FCD+%7C+Orchestration+%7C+Scale;Building+what+matters.+Shipping+fast." alt="Typing SVG" />
 </div>
 
 <div align="center">
@@ -46,21 +46,16 @@ I'm a **Full Stack + DevOps Engineer** passionate about building scalable system
 ## 🌟 Featured Project
 
 <div align="center">
-  <a href="https://ai-interview-prep-two-kappa.vercel.app/">
-    <img src="https://img.shields.io/badge/🤖_AI_Interview_Prep-Live_App-00d9ff?style=for-the-badge&labelColor=0d1117&color=00d9ff" alt="AI Interview Prep" />
-  </a>
-</div>
-
-<div align="center">
   <table>
     <tr>
       <td align="center" width="500">
         <a href="https://ai-interview-prep-two-kappa.vercel.app/">
           <b>🤖 AI Interview Prep</b><br/>
-          <sub>AI-powered mock interview platform for developers. Practice technical and behavioral rounds, get instant feedback, and track your progress.</sub><br/><br/>
+          <sub>AI-powered mock interview platform for developers. Practice technical and behavioral rounds, get instant AI feedback, and track your progress.</sub><br/><br/>
           <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
           <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
           <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" />
+          <img src="https://img.shields.io/badge/AI_Powered-00d9ff?style=flat-square&logoColor=white" />
         </a>
       </td>
     </tr>
@@ -90,7 +85,7 @@ I'm a **Full Stack + DevOps Engineer** passionate about building scalable system
 <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,html,css&theme=dark" alt="Frontend" />
 
 ### ⚙️ Backend & Runtime
-<img src="https://skillicons.dev/icons?i=nodejs,express,php&theme=dark" alt="Backend" />
+<img src="https://skillicons.dev/icons?i=nodejs,express&theme=dark" alt="Backend" />
 
 ### ☁️ Cloud & DevOps
 <img src="https://skillicons.dev/icons?i=aws,docker,kubernetes,githubactions,linux&theme=dark" alt="DevOps" />
@@ -141,7 +136,6 @@ ci_cd:
 architecture:
   patterns: [Microservices, REST APIs, Event-Driven]
   databases: [PostgreSQL, MongoDB, MySQL]
-  cache: Redis
   reverse_proxy: Nginx
 
 philosophy: "Ship fast. Automate everything. Scale without fear."
