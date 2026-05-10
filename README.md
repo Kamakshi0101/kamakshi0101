@@ -1,5 +1,5 @@
 <!-- ═══════════════════════════════════════════════════════ -->
-<!--               KAMAKSHI AGGARWAL
+<!--               KAMAKSHI AGGARWAL -->
 <!-- ═══════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -24,7 +24,7 @@
 
 ## ⚡ About Me
 
-<img align="right" alt="Coding" width="380" src="https://raw.githubusercontent.com/Kamakshi0101/Kamakshi0101/main/coding.svg" />
+<img align="right" alt="Coding" width="380" src="https://raw.githubusercontent.com/Kamakshi0101/Kamakshi0101/master/coding.svg" />
 
 I'm a **Full Stack + DevOps Engineer** passionate about building scalable systems, automating infrastructure, and shipping production-grade software. I live at the intersection of **backend engineering** and **cloud-native architecture**.
 
@@ -43,19 +43,29 @@ I'm a **Full Stack + DevOps Engineer** passionate about building scalable system
 
 ---
 
-## 🌟 Featured Project
+## 🌟 Featured Projects
 
 <div align="center">
   <table>
     <tr>
-      <td align="center" width="500">
+      <td align="center" width="400">
         <a href="https://ai-interview-prep-two-kappa.vercel.app/">
-          <b>🤖 AI Interview Prep</b><br/>
+          <img src="https://img.shields.io/badge/🤖_AI_Interview_Prep-Live-00d9ff?style=for-the-badge&labelColor=0d1117" alt="AI Interview Prep" /><br/><br/>
+          <b>AI Interview Prep</b><br/>
           <sub>AI-powered mock interview platform for developers. Practice technical and behavioral rounds, get instant AI feedback, and track your progress.</sub><br/><br/>
           <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
           <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
           <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" />
-          <img src="https://img.shields.io/badge/AI_Powered-00d9ff?style=flat-square&logoColor=white" />
+        </a>
+      </td>
+      <td align="center" width="400">
+        <a href="https://sadhn-in.vercel.app/">
+          <img src="https://img.shields.io/badge/💼_Sadhn-Live-7c3aed?style=for-the-badge&labelColor=0d1117" alt="Sadhn" /><br/><br/>
+          <b>Sadhn — Skill & Development Hub</b><br/>
+          <sub>A platform connecting learners and mentors for skill development, networking, and real-world project collaboration.</sub><br/><br/>
+          <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+          <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+          <img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white" />
         </a>
       </td>
     </tr>
@@ -198,7 +208,11 @@ $ ls -la ./current-sprint/
   </a>
   &nbsp;
   <a href="https://ai-interview-prep-two-kappa.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/🚀_Live_Project-AI_Interview_Prep-00d9ff?style=for-the-badge&labelColor=0d1117" alt="Project" />
+    <img src="https://img.shields.io/badge/🤖_AI_Interview_Prep-Visit-00d9ff?style=for-the-badge&labelColor=0d1117" alt="AI Interview Prep" />
+  </a>
+  &nbsp;
+  <a href="https://sadhn-in.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/💼_Sadhn-Visit-7c3aed?style=for-the-badge&labelColor=0d1117" alt="Sadhn" />
   </a>
 </div>
 
